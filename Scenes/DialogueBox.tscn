@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn6m2awhb6s0x"]
+
+[ext_resource type="Script" path="res://Scripts/DialogueBox.gd" id="1_wjy5t"]
+[ext_resource type="PackedScene" uid="uid://b7suq8vhia1af" path="res://Scenes/SoundEffect.tscn" id="2_easyq"]
+
+[node name="Polygon2D" type="Polygon2D"]
+position = Vector2(260, 0)
+color = Color(0.168627, 0.168627, 0.168627, 1)
+polygon = PackedVector2Array(0, -1.00001, 0, 157, 616, 158, 616, -1)
+script = ExtResource("1_wjy5t")
+
+[node name="Dialog" type="RichTextLabel" parent="."]
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 603.0
+offset_bottom = 141.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "placeholder"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+autostart = true
+
+[node name="Left" type="Button" parent="."]
+offset_left = -230.0
+offset_right = -30.0
+offset_bottom = 150.0
+
+[node name="LeftLabel" type="RichTextLabel" parent="Left"]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 200.0
+offset_bottom = 148.0
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center]Placeholder[/center]"
+scroll_active = false
+
+[node name="Right" type="Button" parent="."]
+offset_left = 650.0
+offset_right = 850.0
+offset_bottom = 150.0
+
+[node name="RightLabel" type="RichTextLabel" parent="Right"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 48.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center]Placeholder[/center]"
+scroll_active = false
+
+[node name="SoundEffect" parent="." instance=ExtResource("2_easyq")]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="Right" to="." method="_on_right_pressed"]

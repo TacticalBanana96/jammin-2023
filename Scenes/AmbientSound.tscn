@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6nkht7nvumpc"]
+
+[ext_resource type="Script" path="res://Scripts/AmbientSound.gd" id="1_gmq8y"]
+[ext_resource type="AudioStream" uid="uid://3xbbr6l842xf" path="res://Assets/Audio/170084_normal-ambience.wav" id="1_olbcm"]
+
+[node name="AmbientSound" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_olbcm")
+script = ExtResource("1_gmq8y")

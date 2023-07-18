@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1dgnsrh7tl26"]
+
+[ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_2fff3"]
+[ext_resource type="Texture2D" uid="uid://cckr8d5d56lnt" path="res://Assets/Images/bedroom.png" id="1_jp40w"]
+[ext_resource type="Texture2D" uid="uid://kxqrsn3pcfhq" path="res://Assets/Images/overlay.png" id="2_b2rff"]
+[ext_resource type="PackedScene" uid="uid://daiaiao6gcmgd" path="res://Scenes/MenuButton.tscn" id="2_qnro3"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2fff3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jp40w")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_b2rff")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 220.0
+offset_right = 772.0
+offset_bottom = 634.0
+theme_override_constants/separation = 20
+
+[node name="PlayButton" parent="VBoxContainer" instance=ExtResource("2_qnro3")]
+layout_mode = 2
+text = "PLAY"
+next_scene_path = "res://Scenes/MainGame.tscn"
+
+[node name="InstructionButton" parent="VBoxContainer" instance=ExtResource("2_qnro3")]
+layout_mode = 2
+text = "How To Play"
+next_scene_path = "res://Scenes/InstructionsScene.tscn"

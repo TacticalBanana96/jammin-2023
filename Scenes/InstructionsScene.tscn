@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://3peailvn6g5g"]
+
+[ext_resource type="Texture2D" uid="uid://dr0qfqy7pgbvy" path="res://Assets/Images/instructions.png" id="1_hajd3"]
+[ext_resource type="Texture2D" uid="uid://cckr8d5d56lnt" path="res://Assets/Images/bedroom.png" id="1_osh11"]
+[ext_resource type="PackedScene" uid="uid://daiaiao6gcmgd" path="res://Scenes/MenuButton.tscn" id="2_qdic5"]
+
+[node name="InstructionsScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_osh11")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hajd3")
+
+[node name="Button" parent="." instance=ExtResource("2_qdic5")]
+layout_mode = 0
+offset_left = 439.0
+offset_top = 343.0
+offset_right = 747.0
+offset_bottom = 480.0
+text = "Back
+"
+next_scene_path = "res://Scenes/MainMenu.tscn"

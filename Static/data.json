@@ -1,0 +1,508 @@
+{
+	"start": {
+		"images": ["res://Assets/Images/bedroom.png"],
+		"dialogue": ["You wake up in your bed. A soft trickle of light floats through your curtains. It's 6am", "You groan and roll over, maybe you can stay in bed just a little longer?"],
+		"options": { "left": { "text": "Get up", "value": "get_up" }, "right": { "text": "Stay in bed", "value": "stay_in_bed" } },
+		"audio": { "ambient": "res://Assets/Audio/170084_normal-ambience.wav", "effects": [] }
+	},
+	"get_up": {
+		"images": ["res://Assets/Images/bedroom.png", "res://Assets/Images/bedroom.png", "res://Assets/Images/stairs.png", "res://Assets/Images/kitchen.png"],
+		"dialogue": [
+			"You stretch your limbs and roll out of bed",
+			"Carpe diem after all! You take your time strolling over to your closet and running through your clothes before getting dressed",
+			"When you make your way downstairs your mom stands in the kitchen hunched over the stove. An apron drapped over her work clothes as she makes breakfast for herself",
+			"She asks if you would like breakfast too?"
+		],
+		"options": { "left": { "text": "Have breakfast", "value": "early_breakfast" }, "right": { "text": "Head out early", "value": "no_early_breakfast" } },
+		"audio": { "ambient": null, "effects": [null, null, "res://Assets/Audio/tosha73__house-down-stairs.wav"] }
+	},
+	"early_breakfast": {
+		"images": ["res://Assets/Images/kitchen.png", "res://Assets/Images/kitchen.png", "res://Assets/Images/kitchen.png", "res://Assets/Images/side-walk.png"],
+		"dialogue": [
+			"Your mom makes you some breakfast which you scarf down quickly.",
+			"Before for leaving for work she packs a lunch for you which she leaves on the counter before heading out",
+			"'I'll be home late', she chimes as she walks out the door",
+			"You finish up and grab your lunch before heading out the door. As you stroll down the side walk you freeze. There is a dog ahead of you blocking your path"
+		],
+		"options": { "left": { "text": "Approach the dog", "value": "lunch_approach_dog" }, "right": { "text": "Find a way around", "value": "early_avoid_dog" } },
+		"audio": { "ambient": null, "effects": [] }
+	},
+	"lunch_approach_dog": {
+		"images": ["res://Assets/Images/side-walk.png"],
+		"dialogue": ["You approach the dog, it turns to you and bares it's teeth snarling", "Give the dog your lunch?"],
+		"options": { "left": { "text": "Hand it over", "value": "feed_dog" }, "right": { "text": "No its mine", "value": "lunch_denied_attack" } },
+		"audio": { "ambient": "res://Assets/Audio/klankbeeld_ambient-neighbourhood.wav", "effects": ["res://Assets/Audio/danilosfx_dog-growling.wav"] }
+	},
+	"feed_dog": {
+		"images": ["res://Assets/Images/side-walk.png"],
+		"dialogue": ["You toss the food to the ground and the dog goes for it, seeming to calm down alot", "It seems to be completely distracted by the meal giving you a chance to sneak past"],
+		"options": { "left": { "text": "Sneak past the dog", "value": "sneak_past_dog" }, "right": { "text": "Wait", "value": "wait_dog" } },
+		"audio": { "ambient": null, "effects": [] }
+	},
+	"sneak_past_dog": {
+		"images": ["res://Assets/Images/side-walk.png", "res://Assets/Images/busstop.png", "res://Assets/Images/bus-ride.png"],
+		"dialogue": [
+			"You use this opportunity to sneak around the dog. With it's attention focused on the food it doesn't even look up at you",
+			"You continue to make your way down to the bus stop and hop on the first one that passes",
+			"You watch the scenery wiz by, the country side transforming into and urban scape"
+		],
+		"options": { "left": { "text": "Ride all the way to school", "value": "early_school_arrival" }, "right": { "text": "Skip school and go have some fun", "value": "late_skip_school" } },
+		"audio": { "ambient": null, "effects": [null, "res://Assets/Audio/bone666138_bus-arriving-and-departing.wav"] }
+	},
+	"early_school_arrival": {
+		"images": ["res://Assets/Images/school-front-exterior.png"],
+		"dialogue": [
+			"As you stroll into school the school yard is packed, people greeting their friends, younger kids wizz by",
+			"You try to weave through the crowd to get to class but suddenly you are knocked to the ground",
+			"A group of boys hover above you snickering. One steps out from the crowd, it's George, he always picks on you",
+			"'Oh sorry didn't see you there' he says with a saccharine smile, 'Let me help you up.' He reaches out to you as you try to stand and pushes you back to the floor",
+			"'Oh right I seemed to have forgotten my wallet', he grinned, 'Since your my friend and all I'm sure you won't mind giving me yours'"
+		],
+		"options": {
+			"left": { "text": "Just give him your money", "value": "give_money" },
+			"right": { "text": "No way!", "value": "refuse_bully" }
+		},
+		"audio": { "ambient": null, "effects": [] }
+	},
+	"give_money": {
+		"images": ["res://Assets/Images/school-front-exterior.png", "res://Assets/Images/classroom.png"],
+		"dialogue": [
+			"You reach in your pocket and take out your wallet. Before George has a chance to say anything else you shove the wallet at his chest and push past the other boys",
+			"This morning was already not going well. You get to class and take your seat",
+			"After morning classes girl approaches you. She seems quite shy",
+			"'H-hello?' you start she just puts a note down on your desk and hurries away.",
+			"You take a look at the note she left, meet me after school on the roof I have something to tell you",
+			"You finish the rest of your classes and the final bell rings"
+		],
+		"options": { "left": { "text": "Head home", "value": "late_walk_home" }, "right": { "text": "Head to the roof", "value": "roof_meeting" } },
+		"audio": { "ambient": null, "effects": [null, null, null, null, null, "res://Assets/Audio/school-bell.wav"] }
+	},
+	"refuse_bully": {
+		"images": ["res://Assets/Images/school-front-exterior.png", "res://Assets/Images/school-front-exterior.png", "res://Assets/Images/classroom.png"],
+		"dialogue": [
+			"'No way!' you say as you push yourself off the ground. George just has an uninterpretable look on his face",
+			"'Meet me behind school after class or my boys here will mess you up', he treathens, collective ooos ring out from the crowd",
+			"They step aside and you head to class.",
+			"The day almost passes too quickly after that, soon the final bell rings and it's time"
+		],
+		"options": {
+			"left": { "text": "Head behind the school", "value": "meet_behind_school" },
+			"right": { "text": "Go home", "value": "attempt_go_home" }
+		},
+		"audio": { "ambient": null, "effects": [null, null, null, "res://Assets/Audio/school-bell.wav"] }
+	},
+	"meet_behind_school": {
+		"images": ["res://Assets/Images/behind-school.png"],
+		"dialogue": [
+			"No point trying to avoid it, you head behind the school and find George standing there backing you",
+			"It doesn't look like any of his cronies are around",
+			"'I asked you to come here for a very important reason', he starts, 'the truth is'",
+			"He turns around, eyes glistening, 'I'm in love with you'"
+		],
+		"options": {
+			"left": { "text": "wtf", "value": "continue_confession" },
+			"right": { "text": "wtf", "value": "continue_confession" }
+		},
+		"audio": { "ambient": null, "effects": [] }
+	},
+	"continue_confession": {
+		"images": ["res://Assets/Images/behind-school.png"],
+		"dialogue": ["'I know it's sudden I realised, I'm always picking on you, beating you up, stealing your lunch money.. Why else would I do all that if not for love?'", "You stand there speech less as he continues, 'I know this comes as a shock but what do you say?'"],
+		"options": {
+			"left": { "text": "Accept", "value": "accept_confession" },
+			"right": { "text": "Reject", "value": "reject_confession" }
+		},
+		"audio": { "ambient": null, "effects": [] }
+	},
+	"accept_confession": {
+		"images": ["res://Assets/Images/behind-school.png", "res://Assets/Images/behind-school.png", "res://Assets/Images/enemies_to_lovers.png"],
+		"dialogue": ["Well what's more romantic than someone constantly tormenting you for years", "This couldnt possible end badly. Best start saving up for couples therapy"],
+		"options": { "left": { "text": "Main menu", "value": "menu" }, "right": { "text": "Restart", "value": "restart" } },
+		"audio": { "ambient": null, "effects": [] },
+		"end": "enemies_to_lovers"
+	},
+	"reject_confession": {
+		"images": ["res://Assets/Images/behind-school.png", "res://Assets/Images/behind-school.png", "res://Assets/Images/healthier_relationship.png"],
+		"dialogue": ["You look away 'I'm sorry, I can't accept a love like yours'", "A single tear falls from your eye, 'I have to put myself first'", "You run off, perhaps to a healthier love life"],
+		"options": { "left": { "text": "Main menu", "value": "menu" }, "right": { "text": "Restart", "value": "restart" } },
+		"audio": { "ambient": null, "effects": [] },
+		"end": "healthier_relationship"
+	},
+	"attempt_go_home": {
+		"images": ["res://Assets/Images/school-front-exterior.png", "res://Assets/Images/school-front-exterior.png", "res://Assets/Images/school-front-exterior.png", "res://Assets/Images/beaten_up.png"],
+		"dialogue": [
+			"Go behind the school for what? To go to your death? No way you are just gonna go home",
+			"As you make your way to the front gates two of George's lackies step from behind the pillars",
+			"'Trying to get away are you?' one of them mocks",
+			"The last thing you remember is a fist coming right at your face"
+		],
+		"options": { "left": { "text": "Main menu", "value": "menu" }, "right": { "text": "Restart", "value": "restart" } },
+		"audio": { "ambient": null, "effects": [null, null, null, "res://Assets/Audio/florianreichelt__punch"] },
+		"end": "beaten_up"
+	},
+	"wait_dog": {
+		"images": ["res://Assets/Images/side-walk.png"],
+		"dialogue": [
+			"The dog finishes your lunch and then looks at you and wags its tail.You give it a pat on the head.",
+			"Suddenly the dog looks at you with concern in it's eyes. It gives a small bark as if it wants you to follow it.",
+			"What's that lassie? Little Timmy is stuck down a well?",
+			"At least that's what you think he's saying"
+		],
+		"options": {
+			"left": { "text": "Follow the dog", "value": "follow_dog" },
+			"right": { "text": "You don't have time for this", "value": "skip_dog_school" }
+		},
+		"audio": { "ambient": null, "effects": ["res://Assets/Audio/nicholasjudy567_dog-pant.wav", "res://Assets/Audio/nathymunoz_dog-sound.wav"] }
+	},
+	"follow_dog": {
+		"images": ["res://Assets/Images/hole-in-fence.png", "res://Assets/Images/forest.png", "res://Assets/Images/haunted-house.png"],
+		"dialogue": [
+			"You follow the dog and it leads you through a hole in the fence. He leads you into a small forested area.",
+			"The dog bounds swiftly ahead making tight corners through the winding forest path.",
+			"You are able to keep out and soon the path opens up into a small clearing at the center of which is a old, derelict house.",
+			"The dog sits at the entrance of the home, its door slightly a jar letting the inky darkness of the lair seep out."
+		],
+		"options": {
+			"left": { "text": "Enter the house", "value": "enter_haunted_house" },
+			"right": { "text": "No way", "value": "refuse_enter_house" }
+		},
+		"audio": { "ambient": null, "effects": ["res://Assets/Audio/zaku18_hole-in-fence.wav", "res://Assets/Audio/yin_yang_jake007_walking-on-dried-grass.wav"] }
+	},
+	"enter_haunted_house": {
+		"images": ["res://Assets/Images/house_interior.png"],
+		"dialogue": [
+			"You take a sharp breath in and step into the house. As you pass beyond the threshhold as chill runs up your body.",
+			"You cannot shake the feeling that you've made a grave mistake",
+			"The air in the house is cold and stale as if it has sat undisturbed for many years.",
+			"You hear what seems like a child crying upstairs, as you go to follow the found another noise, which sounds like foot steps, echo up from the basement"
+		],
+		"options": {
+			"left": { "text": "Go upstairs", "value": "house_upstairs" },
+			"right": { "text": "Go to the basement", "value": "house_basement" }
+		},
+		"audio": { "ambient": "res://Assets/Audio/broodkovsci__ambient_stale-air.wav", "effects": [] }
+	},
+	"house_upstairs": {
+		"images": ["res://Assets/Images/house_interior.png", "res://Assets/Images/house_interior.png", "res://Assets/Images/house_interior.png", "res://Assets/Images/house_interior.png", "res://Assets/Images/jumpscare.png", "res://Assets/Images/ghost_death.png"],
+		"dialogue": [
+			"You begin to climb the stairs, the house seems to creek and groan around you",
+			"The crying you hear suddenly stops.",
+			"You pause mid step, the house suddenly going silent. The only sound you can hear is your own breath",
+			"A tall lumbering figure steps out of the darkness of the upstairs, her neck bends at an odd angle and a too wide smile spreads across her face",
+			"Wrong choice she whispers.",
+			"Try again?"
+		],
+		"options": { "left": { "text": "Main menu", "value": "menu" }, "right": { "text": "Restart", "value": "restart" } },
+		"audio": { "ambient": null, "effects": ["res://Assets/Audio/nachtmahrtv_haunted-house-stairs.wav", null, null, null, "res://Assets/Audio/magmisoundtracks__jumpscare.wav"] },
+		"end": "house_upstairs_death"
+	},
+	"house_basement": {
+		"images": ["res://Assets/Images/house_interior.png", "res://Assets/Images/girl-standing-in-corner.png"],
+		"dialogue": [
+			"You head down to the basement, it's pitch black. You pick up a flashlight at the base of the stairs, someone must've dropped it",
+			"You flick on the flashlight to find a young girl standing in the corner of the dark basement, her face is towards the wall.",
+			"She whispers something quietly, you can't make out the words"
+		],
+		"options": {
+			"left": { "text": "Approach her", "value": "approach_basement_girl" },
+			"right": { "text": "Leave", "value": "turn_basement_death" }
+		},
+		"audio": { "ambient": null, "effects": ["res://Assets/Audio/nachtmahrtv_haunted-house-stairs.wav"] }
+	},
+	"approach_basement_girl": {
+		"images": ["res://Assets/Images/girl-standing-in-corner.png"],
+		"dialogue": ["As you get closer to her you can finally make out what she is saying", "'don't look. don't look. don't look. don't look. don't look...' over and over on repeat. ", "You hear a creak behind you "],
+		"options": {
+			"left": { "text": "Don't look", "value": "dont_look" },
+			"right": { "text": "Look", "value": "turn_basement_death" }
+		},
+		"audio": { "ambient": null, "effects": [] }
+	},
+	"dont_look": {
+		"images": [
+			"res://Assets/Images/girl-standing-in-corner.png",
+			"res://Assets/Images/girl-standing-in-corner.png",
+			"res://Assets/Images/girl-standing-in-corner.png",
+			"res://Assets/Images/girl-standing-in-corner.png",
+			"res://Assets/Images/house_interior.png",
+			"res://Assets/Images/escape_house.png"
+		],
+		"dialogue": [
+			"The hairs on the back of your neck stand on end, you feel your entire body enveloped in goose flesh.",
+			" You can sense someone is right behind you, you can feel their breath on your next.",
+			"they are close... so close.",
+			"But you do not look. You take the young girls hand and tell her 'close your eyes'.",
+			"You keep your eyes lowered and slowly back up, back the way you came. The creature behind you staying just out of sight.",
+			"you back up all the way upstairs before closing your eyes and running out the front door. safe"
+		],
+		"options": { "left": { "text": "Main menu", "value": "menu" }, "right": { "text": "Restart", "value": "restart" } },
+		"audio": { "ambient": null, "effects": [] },
+		"end": "escape_house"
+	},
+	"turn_basement_death": {
+		"images": ["res://Assets/Images/girl-standing-in-corner.png", "res://Assets/Images/jumpscare.png", "res://Assets/Images/ghost_death.png"],
+		"dialogue": ["This is all too strange so you decide to turn to leave", "As you turn you are face to face with a groteque woman, her neck bends at an odd angle and a too wide smile spreads across her face", "Try again?"],
+		"options": { "left": { "text": "Main menu", "value": "menu" }, "right": { "text": "Restart", "value": "restart" } },
+		"audio": { "ambient": null, "effects": [null, "res://Assets/Audio/magmisoundtracks__jumpscare.wav"] },
+		"end": "basement_turn_death"
+	},
+	"refuse_enter_house": {
+		"images": ["res://Assets/Images/forest.png", "res://Assets/Images/forest.png", "res://Assets/Images/forest.png", "res://Assets/Images/lost_in_the_woods.png"],
+		"dialogue": [
+			"You turn and run back to the forest, you hear a small yelp from the dog behind you but you don't turn to look",
+			"You try to remember the way back but every turn you take gets you even more lost",
+			"You feel panic rising in your through as you frantically search for the way back",
+			"Before long you are panting and sit at the base of a tree. Maybe you will just rest here for a moment and then try to find your way"
+		],
+		"options": { "left": { "text": "Main menu", "value": "menu" }, "right": { "text": "Restart", "value": "restart" } },
+		"audio": { "ambient": "res://Assets/Audio/szegvari__dark-scape-forest-rain.wav", "effects": ["res://Assets/Audio/straget__forest-walk.wav", null, "res://Assets/Audio/straget__forest-walk.wav"] },
+		"end": "lost_in_the_woods"
+	},
+	"skip_dog_school": {
+		"images": ["res://Assets/Images/side-walk.png", "res://Assets/Images/busstop.png", "res://Assets/Images/bus-ride.png"],
+		"dialogue": [
+			"You don't have time to chase after random dogs. It whines at you softly as you walk past",
+			"You continue to make your way down to the bus stop and hop on the first one that passes",
+			"You watch the scenery wiz by, the country side transforming into and urban scape"
+		],
+		"options": { "left": { "text": "Ride all the way to school", "value": "early_school_arrival" }, "right": { "text": "Skip school and go have some fun", "value": "late_skip_school" } },
+		"audio": { "ambient": null, "effects": [null, "res://Assets/Audio/bone666138_bus-arriving-and-departing.wav"] }
+	},
+	"lunch_denied_attack": {
+		"images": ["res://Assets/Images/side-walk.png", "res://Assets/Images/side-walk.png", "res://Assets/Images/dog_attack.png"],
+		"dialogue": ["No this is your lunch! Your mom made it for you!", "Unfornately it doesn't seem to agree. It lunges at you, knocking you to the ground. It hovers over you for a moment before burying its teeth in your neck", "Try again?"],
+		"options": { "left": { "text": "Main menu", "value": "menu" }, "right": { "text": "Restart", "value": "restart" } },
+		"audio": { "ambient": null, "effects": ["res://Assets/Audio/deleted_user_3424813_dog-attack.wav"] },
+		"end": "dog_attack"
+	},
+	"early_avoid_dog": {
+		"images": ["res://Assets/Images/side-walk.png", "res://Assets/Images/busstop.png", "res://Assets/Images/bus-ride.png"],
+		"dialogue": [
+			"You decide to hop the fence next to you and make your way across the field. No way are you approaching some dog",
+			"You manage to cut across the field and get to the bus stop and catch one",
+			"You watch the scenery wiz by, the country side transforming into and urban scape"
+		],
+		"options": { "left": { "text": "Ride all the way to school", "value": "early_school_arrival" }, "right": { "text": "Skip school and go have some fun", "value": "late_skip_school" } },
+		"audio": { "ambient": null, "effects": ["res://Assets/Audio/zaku18_hole-in-fence.wav", "res://Assets/Audio/bone666138_bus-arriving-and-departing.wav"] }
+	},
+	"no_early_breakfast": {
+		"images": ["res://Assets/Images/side-walk.png", "res://Assets/Images/side-walk.png", "res://Assets/Images/busstop.png", "res://Assets/Images/bus-ride.png"],
+		"dialogue": [
+			"You leave home and stroll down the side walk on the way to the bus stop",
+			"It's so early there isn't another soul here. Your walk is uneventful",
+			"You hop on the first bus that passes",
+			"You watch the scenery wiz by, the country side transforming into and urban scape"
+		],
+		"options": { "left": { "text": "Ride all the way to school", "value": "early_school_arrival" }, "right": { "text": "Skip school and go have some fun", "value": "late_skip_school" } },
+		"audio": { "ambient": "res://Assets/Audio/klankbeeld_ambient-neighbourhood.wav", "effects": [null, null, "res://Assets/Audio/bone666138_bus-arriving-and-departing.wav"] }
+	},
+	"stay_in_bed": {
+		"images": ["res://Assets/Images/bedroom.png"],
+		"dialogue": [
+			"Five more minutes won't hurt you tell yourself as you pull the covers back over your head.",
+			"You wake up again an indeterminate amount of time later. The sun is high in the sky and your body is drenched in sweat. Your soaked pajamas cling to your skin.",
+			"You are dazed but one thing is clear... You are definitely late for school.",
+			"You throw the sheets off yourself and rush to get dressed, your in a hurry."
+		],
+		"options": { "left": { "text": "No time to waste. Run downtairs", "value": "run_downstairs" }, "right": { "text": "Can't be late twice. Take your time", "value": "no_rush" } },
+		"audio": { "ambient": null, "effects": [] }
+	},
+	"no_rush": {
+		"images": ["res://Assets/Images/stairs.png", "res://Assets/Images/kitchen.png"],
+		"dialogue": ["Better safe than sorry", "You take your time and get dressed before making your way downstairs", "You look around, your mom has already left for work. Do you want to try to make some breakfast?"],
+		"options": { "left": { "text": "Make breakfast", "value": "rushed_late_breakfast" }, "right": { "text": "Skip breakfast", "value": "late_no_breakfast" } },
+		"audio": { "ambient": null, "effects": [null, "res://Assets/Audio/tosha73__house-down-stairs.wav"] }
+	},
+	"late_no_breakfast": {
+		"images": ["res://Assets/Images/kitchen.png", "res://Assets/Images/side-walk.png"],
+		"dialogue": ["You decide you are already running too late, maybe you can grab something on the way?", "On leaving home and walking to the bus stop you notice a dog on the side walk about 20 feet ahead of you"],
+		"options": { "left": { "text": "approach the dog", "value": "approach_dog_death" }, "right": { "text": "Find a way around", "value": "late_avoid_dog" } },
+		"audio": { "ambient": "res://Assets/Audio/klankbeeld_ambient-neighbourhood.wav", "effects": [] }
+	},
+	"run_downstairs": {
+		"images": ["res://Assets/Images/stairs.png", "res://Assets/Images/kitchen.png"],
+		"dialogue": [
+			"No time to waste! You bound down the stairs as quickly as possible. Your stomach jumps into your throat as you feel the sudden jolt of your foot missing a step",
+			"You crash down into a heap at the bottom of the stairs. Your ankle is definitely twisted... this may slow you down",
+			"You limp your way into the kitchen, your mom has already left for work. So you want to make yourself breakfast?"
+		],
+		"options": { "left": { "text": "Make breakfast", "value": "rushed_late_breakfast" }, "right": { "text": "Skip breakfast", "value": "rushed_late_no_breakfast" } },
+		"audio": { "ambient": null, "effects": ["res://Assets/Audio/trp__falling-down-stairs.wav"] }
+	},
+	"rushed_late_breakfast": {
+		"images": ["res://Assets/Images/kitchen.png", "res://Assets/Images/kitchen.png", "res://Assets/Images/kitchen.png", "res://Assets/Images/kitchen.png", "res://Assets/Images/food_poisoning.png"],
+		"dialogue": [
+			"After searching the kitchen for a bit you only find a single egg in the back of the fridge.",
+			"It's better than nothing, you shrug and fry it up. It doesn't quite look right.. and it has a slight smell... but you decide to eat it anyway. What's the worst that can happen?",
+			"A few moments after you finish your meal you feel your stomach start to gurgle. The it elevates to a stabbing pain in your gut. Maybe breakfast wasn't such a good idea",
+			"You crumple to the floor clutching your stomach, your vision fading in and out.",
+			"Maybe you shouldn't have eaten those eggs..."
+		],
+		"options": { "left": { "text": "Main menu", "value": "menu" }, "right": { "text": "Restart", "value": "restart" } },
+		"audio": { "ambient": null, "effects": [null, null, null, "res://Assets/Audio/breviceps_fall.wav"] },
+		"end": "food_poisoning"
+	},
+	"rushed_late_no_breakfast": {
+		"images": ["res://Assets/Images/kitchen.png", "res://Assets/Images/side-walk.png"],
+		"dialogue": ["You decide you are already running too late plus this injured ankle will only slow you down, maybe you can grab something on the way?", "On leaving home and walking to the bus stop you notice a dog on the side walk about 20 feet ahead of you"],
+		"options": { "left": { "text": "approach the dog", "value": "approach_dog_death" }, "right": { "text": "Find a way around", "value": "rushed_late_avoid_dog" } },
+		"audio": { "ambient": "res://Assets/Audio/klankbeeld_ambient-neighbourhood.wav", "effects": [] }
+	},
+	"rushed_late_avoid_dog": {
+		"images": ["res://Assets/Images/field.png"],
+		"dialogue": [
+			"You decide to hop the fence next to you to make your way across the field. But as you make your jump you land right on your already injured ankle",
+			"A bolt of pain runs up your leg and you fall to the ground",
+			"You try to get up and make your way across the field to get to the bus stop but you are in too much pain to walk all the way",
+			"You do remember that there was a short cut through the wooded area nearby, but you arent sure you know the way.."
+		],
+		"options": { "left": { "text": "Just sit and rest, no point going on", "value": "sit_under_tree" }, "right": { "text": "Try to cut through the woods", "value": "lost_in_the_woods" } },
+		"audio": { "ambient": null, "effects": ["res://Assets/Audio/zaku18_hole-in-fence.wav", null, "res://Assets/Audio/yin_yang_jake007_walking-on-dried-grass.wav"] }
+	},
+	"sit_under_tree": {
+		"images": ["res://Assets/Images/field.png", "res://Assets/Images/field.png", "res://Assets/Images/sleep_under_tree.png"],
+		"dialogue": [
+			"Your ankle is throbbing so you decide to just take a seat under a nearby tree",
+			"Well you didn't make it far but that's not bad right? This in itself is an adventure on it's own",
+			"You rest your head back and close your eyes. Maybe tomorrow will be a better day"
+		],
+		"options": { "left": { "text": "Main menu", "value": "menu" }, "right": { "text": "Restart", "value": "restart" } },
+		"audio": { "ambient": null, "effects": [] },
+		"end": "sleep_under_tree"
+	},
+	"lost_in_the_woods": {
+		"images": ["res://Assets/Images/forest.png", "res://Assets/Images/forest.png", "res://Assets/Images/forest.png", "res://Assets/Images/forest.png", "res://Assets/Images/lost_in_the_woods.png"],
+		"dialogue": [
+			"You push aside some of the low hanging cypress branches and make your way along a small trodden path",
+			"The trees are so dense it looks dark here even though its almost midday",
+			"You try to stick to the path but it's hard to tell which way it bends, left... or maybe right?",
+			"Your ankle is throbbing with pain as you find yourself getting more and more turned around",
+			"Maybe you should take a break.. I'm sure you can find your way home later..."
+		],
+		"options": { "left": { "text": "Main menu", "value": "menu" }, "right": { "text": "Restart", "value": "restart" } },
+		"audio": { "ambient": "res://Assets/Audio/szegvari__dark-scape-forest-rain.wav", "effects": ["res://Assets/Audio/straget__forest-walk.wav", null, "res://Assets/Audio/straget__forest-walk.wav"] },
+		"end": "lost_in_the_woods"
+	},
+	"approach_dog_death": {
+		"images": ["res://Assets/Images/side-walk.png", "res://Assets/Images/side-walk.png", "res://Assets/Images/side-walk.png", "res://Assets/Images/dog_attack.png"],
+		"dialogue": [
+			"You are a total dog person, you love them. You are sure it's friendly",
+			"The dog turns to you and starts to snarl, baring it's teeth.",
+			"It lunges at you! Startled you tumble to the ground. Unfortunately this gives the canine a chance to sink its teeth into your throat",
+			"Try again?"
+		],
+		"options": { "left": { "text": "Main menu", "value": "menu" }, "right": { "text": "Restart", "value": "restart" } },
+		"audio": { "ambient": null, "effects": [null, "res://Assets/Audio/danilosfx_dog-growling.wav", "res://Assets/Audio/deleted_user_3424813_dog-attack.wav"] },
+		"end": "dog_attack"
+	},
+	"late_avoid_dog": {
+		"images": ["res://Assets/Images/side-walk.png", "res://Assets/Images/busstop.png", "res://Assets/Images/bus-ride.png"],
+		"dialogue": [
+			"You decide to hop the fence next to you and make your way across the field. No way are you approaching some dog",
+			"You manage to cut across the field and get to the bus stop and catch one",
+			"You watch the scenery wiz by, the country side transforming into and urban scape"
+		],
+		"options": { "left": { "text": "Ride all the way to school", "value": "late_school_arrival" }, "right": { "text": "Skip school and go have some fun", "value": "late_skip_school" } },
+		"audio": { "ambient": null, "effects": ["res://Assets/Audio/zaku18_hole-in-fence.wav", "res://Assets/Audio/bone666138_bus-arriving-and-departing.wav"] }
+	},
+	"late_school_arrival": {
+		"images": ["res://Assets/Images/bus-ride.png", "res://Assets/Images/school-front-exterior.png", "res://Assets/Images/classroom.png"],
+		"dialogue": [
+			"As late as you are your education is important to you. You continue to make your way to school",
+			"On arriving the yard is empty, everyone is in class.",
+			"You try to make your way in unnoticed, as you sit at you desk a girl approaches you. She seems quite shy",
+			"'H-hello?' you start she just puts a note down on your desk and hurries away.",
+			"You take a look at the note she left, meet me after school on the roof I have something to tell you",
+			"You finish the rest of your classes and the final bell rings"
+		],
+		"options": { "left": { "text": "Head home", "value": "late_walk_home" }, "right": { "text": "Head to the roof", "value": "roof_meeting" } },
+		"audio": { "ambient": null, "effects": [null, null, null, null, null, "res://Assets/Audio/school-bell.wav"] }
+	},
+	"late_walk_home": {
+		"images": ["res://Assets/Images/side-walk.png", "res://Assets/Images/late_walk_home.png"],
+		"dialogue": ["You head home, the neighbourhood bathed in the orange-red warmth of the setting sun", "You had kind of a rough start but it all turned out fine in the end. Though you can't help but wonder what would have happened if things went a little differently..."],
+		"options": { "left": { "text": "Main menu", "value": "menu" }, "right": { "text": "Restart", "value": "restart" } },
+		"audio": { "ambient": "res://Assets/Audio/klankbeeld_ambient-neighbourhood.wav", "effects": [] },
+		"end": "late_walk_home"
+	},
+	"roof_meeting": {
+		"images": ["res://Assets/Images/school-roof.png", "res://Assets/Images/school-roof.png", "res://Assets/Images/school-roof-alien.png"],
+		"dialogue": [
+			"You climb the stairs to the roof, the heavy metallic door at the top produces a high groaning sound as you push it open.",
+			"You see the girl standing at the other side of the roof backing you. 'I've been watching you for sometime' she says, 'I have to admit I've been quite interested in you but I didnt know how to tell you'",
+			"'I....I'",
+			"She spins around revealing green skin and large inky black eyes, 'I like you... I want you to comeback to my home world with me and bare my offspring!'"
+		],
+		"options": {
+			"left": { "text": "I like you to! Let's do this!", "value": "alien_wife" },
+			"right": { "text": "Uhhh.. I think I left my oven on (run)", "value": "alien_abduction" }
+		},
+		"audio": { "ambient": null, "effects": [] }
+	},
+	"alien_wife": {
+		"images": ["res://Assets/Images/school-roof-alien.png", "res://Assets/Images/abduction.png", "res://Assets/Images/alien_wife.png"],
+		"dialogue": [
+			"'Really? You mean it?' she squeals. A light shines down enveloping you both. You feel yourself becoming weightless and your feet leave the ground",
+			"You both start floating into the air as a massive alien ship uncloaks itself",
+			"Your day may have started out average but it sure took a turn for the strange"
+		],
+		"options": { "left": { "text": "Main menu", "value": "menu" }, "right": { "text": "Restart", "value": "restart" } },
+		"audio": { "ambient": null, "effects": [null, "res://Assets/Audio/khaldrogo12_alien-ship.wav"] },
+		"end": "alien_wife"
+	},
+	"alien_abduction": {
+		"images": ["res://Assets/Images/school-roof-alien.png", "res://Assets/Images/school-roof-alien.png", "res://Assets/Images/alien_brain_scramble.png"],
+		"dialogue": ["You turn to leave. 'I'm sorry' she says, 'I can't let you leave that easily...'", "You look back to see her holding some type of laser gun, 'You've seen to much'", "Then your vision goes dark"],
+		"options": { "left": { "text": "Main menu", "value": "menu" }, "right": { "text": "Restart", "value": "restart" } },
+		"audio": { "ambient": null, "effects": [] },
+		"end": "alien_brain_scramble"
+	},
+	"late_skip_school": {
+		"images": [
+			"res://Assets/Images/bus-ride.png",
+			"res://Assets/Images/bus-ride.png",
+			"res://Assets/Images/bus-ride.png",
+			"res://Assets/Images/car-in-town.png",
+			"res://Assets/Images/car-in-town.png",
+			"res://Assets/Images/car-in-town.png",
+			"res://Assets/Images/car-in-town.png",
+			"res://Assets/Images/car-chase.png"
+		],
+		"dialogue": [
+			"Thats right! No point feeding the capitalist machine with more bodies to chew up and spit out",
+			"School only exists to mould my skills into a profitable human shaped gear for the upper class!",
+			"Freedom is yours and you are only young once!",
+			"As you wander the town you spot a red sports car pull up on the curb, the owner stepping out and dashing his ciggarette on the curb at your feet before heading into a store",
+			"Wreak havoc on the upper class...",
+			"You hop into the drivers seat of the hot rod, the keys are still in the car",
+			"You peel out seeing the man in your review mirror yelling at you to stop. But you don't",
+			"As you weave through the streets you see red and blue lights flashing around you.",
+			"You turn a corner seeing a draw bridge rising, it's your only escape"
+		],
+		"options": {
+			"left": { "text": "Gun it", "value": "jump_the_bridge" },
+			"right": { "text": "Your not going to make it", "value": "arrested" }
+		},
+		"audio": { "ambient": null, "effects": [null, null, null, null, null, "res://Assets/Audio/sonically_sound__car-rev.wav", null, "res://Assets/Audio/car-chase.wav"] }
+	},
+	"jump_the_bridge": {
+		"images": ["res://Assets/Images/car-chase.png", "res://Assets/Images/car-chase.png", "res://Assets/Images/car-chase.png", "res://Assets/Images/car-makes-jump.png", "res://Assets/Images/drive_into_the_sunset.png"],
+		"dialogue": [
+			"You gun it. Pushing the pedal down with all your strength, the muscles in your leg cramping",
+			"The tires screech and the smell of burning rubber fills your nose. The car lurches forward flinging you back into your seat",
+			"The bridge continues to rise as you reach it, but you don't let up, not even for a second",
+			"You are launched into the air, your body becoming weightless. The police cars below come to a screeching halt",
+			"You did it..."
+		],
+		"options": { "left": { "text": "Main menu", "value": "menu" }, "right": { "text": "Restart", "value": "restart" } },
+		"audio": { "ambient": null, "effects": [] },
+		"end": "drive_into_the_sunset"
+	},
+	"arrested": {
+		"images": ["res://Assets/Images/car-chase.png", "res://Assets/Images/car-chase.png", "res://Assets/Images/car-chase.png", "res://Assets/Images/arrested.png"],
+		"dialogue": ["You stop the car, the roaring engine going silent", "Flashing lights surround you... it was a good run", "You almost made it", "You were almost free"],
+		"options": { "left": { "text": "Main menu", "value": "menu" }, "right": { "text": "Restart", "value": "restart" } },
+		"audio": { "ambient": null, "effects": [] },
+		"end": "arrested"
+	}
+}

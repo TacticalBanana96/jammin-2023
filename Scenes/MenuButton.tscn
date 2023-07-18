@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://daiaiao6gcmgd"]
+
+[ext_resource type="Script" path="res://Scripts/MenuButton.gd" id="1_ju71l"]
+
+[node name="Button" type="Button"]
+offset_right = 295.0
+offset_bottom = 200.0
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 50
+text = "Placeholder"
+script = ExtResource("1_ju71l")
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]
